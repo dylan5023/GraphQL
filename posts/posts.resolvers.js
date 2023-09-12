@@ -1,4 +1,4 @@
-const postsModel = require("./posts.model.js");
+const postsModel = require("./posts.model");
 module.exports = {
   Query: {
     posts: () => {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   Mutation: {
-    addNewPosts: (_, args) => {
+    addNewPost: (_, args) => {
       return postsModel.addNewPost(args.id, args.title, args.description);
     },
   },
